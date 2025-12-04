@@ -46,13 +46,13 @@ export default async function ResultPage({ params }: PageProps) {
 
                     <div className="bg-pink-50 p-4 rounded-xl text-sm text-gray-700 space-y-2 text-left">
                         <p className="font-bold text-pink-600 mb-2">썸타임이 약속하는 것</p>
-                        <p className="flex items-center gap-2"><Check className="w-4 h-4 text-pink-500" /> 화려한 마케팅보다 <strong>진솔한 소통</strong>을 할게요.</p>
-                        <p className="flex items-center gap-2"><Check className="w-4 h-4 text-pink-500" /> 단순 매칭보다 <strong>대화의 시작</strong>을 도울게요.</p>
-                        <p className="flex items-center gap-2"><Check className="w-4 h-4 text-pink-500" /> 여러분의 목소리를 <strong>기술적 문제</strong>로 보고 해결할게요.</p>
+                        <p className="flex items-start gap-2"><Check className="w-4 h-4 text-pink-500 mt-0.5 shrink-0" /> <span className="flex-1">화려한 마케팅보다 <strong>진솔한 소통</strong>을 할게요.</span></p>
+                        <p className="flex items-start gap-2"><Check className="w-4 h-4 text-pink-500 mt-0.5 shrink-0" /> <span className="flex-1">단순 매칭보다 <strong>대화의 시작</strong>을 도울게요.</span></p>
+                        <p className="flex items-start gap-2"><Check className="w-4 h-4 text-pink-500 mt-0.5 shrink-0" /> <span className="flex-1">여러분의 목소리를 <strong>기술적 문제</strong>로 보고 해결할게요.</span></p>
                     </div>
 
                     <a
-                        href="https://sometime.im"
+                        href="https://info.some-in-univ.com"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="block w-full py-4 bg-pink-500 text-white rounded-xl 
@@ -77,6 +77,6 @@ export default async function ResultPage({ params }: PageProps) {
                     </Link>
                 </div>
             </div>
-        </main>
+        </main >
     );
 }
