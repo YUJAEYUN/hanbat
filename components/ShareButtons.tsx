@@ -10,37 +10,39 @@ export default function ShareButtons() {
     };
 
     const handleKakaoShare = () => {
-        // Kakao SDK implementation would go here.
-        // For MVP without actual SDK setup, we might just alert or try to open a share intent if possible,
-        // but PRD specifies Kakao SDK code. 
-        // Since we don't have the SDK script loaded in layout yet, this might fail.
-        // We will add a placeholder alert for now or try to use a web intent if available.
-        // Real Kakao share requires an API key and script initialization.
-        // I will add a TODO comment and a fallback alert.
-
         if (typeof window !== 'undefined' && (window as any).Kakao) {
             const Kakao = (window as any).Kakao;
+
             if (!Kakao.isInitialized()) {
-                // Initialize with a dummy key or env var if we had one.
-                // For this MVP, we might skip actual initialization if we don't have a key.
-                // But I'll put the code structure.
-                // Kakao.init('YOUR_APP_KEY');
+                alert('카카오톡 공유를 위해 API 키 설정이 필요합니다.');
+                return;
             }
 
-            Kakao.Link.sendDefault({
+            const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || window.location.origin;
+
+            Kakao.Share.sendDefault({
                 objectType: 'feed',
                 content: {
-                    title: '나는 진중한 대화가!', // Dynamic title based on result would be better but component is generic
-                    description: '너는 어떤 유형? 한밭대생 연애 테스트',
-                    imageUrl: 'https://test.sometime.im/og-image.png',
+                    title: '한밭대생 연애 유형 테스트',
+                    description: '나는 어떤 연애 스타일일까? 100% 리얼 학생 개발팀이 만든 테스트!',
+                    imageUrl: `${baseUrl}/og-image.png`,
                     link: {
-                        mobileWebUrl: window.location.origin + '/start',
-                        webUrl: window.location.origin + '/start',
+                        mobileWebUrl: baseUrl,
+                        webUrl: baseUrl,
                     },
                 },
+                buttons: [
+                    {
+                        title: '테스트 하러가기',
+                        link: {
+                            mobileWebUrl: baseUrl,
+                            webUrl: baseUrl,
+                        },
+                    },
+                ],
             });
         } else {
-            alert('카카오톡 공유 기능은 실제 배포 및 API 키 설정 후 동작합니다.');
+            alert('카카오톡 SDK가 로드되지 않았습니다.');
         }
     };
 
