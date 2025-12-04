@@ -25,7 +25,7 @@ export default function StartPage() {
                         <p className="text-gray-600 font-medium leading-relaxed">
                             "우리는 어떤 연애를 꿈꾸고 있을까요?"<br />
                             <span className="text-sm text-gray-500 font-normal">
-                                학생 개발팀이 만든, 가장 솔직한 마음 테스트
+                                한밭대 컴공과 학부생이 만든, 가장 솔직한 마음 테스트
                             </span>
                         </p>
                     </div>

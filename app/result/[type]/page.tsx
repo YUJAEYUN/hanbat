@@ -34,7 +34,8 @@ export default async function ResultPage({ params }: PageProps) {
                             썸타임 팀의 솔직한 이야기
                         </h3>
                         <p className="text-gray-600 text-sm leading-relaxed text-left">
-                            안녕하세요, 저희는 이 서비스를 만든 <strong>한밭대 학생 개발팀</strong>이에요.<br /><br />
+                            안녕하세요, 저는 썸타임 서비스를 만들고 있는 <strong>한밭대 컴공과 학생</strong>이에요.<br /><br />
+                            저희가 썸타임을 시작한 이유는 하나에요. 대학생들에게 진정으로 의미 있는 관계의 시작을 돕는 것이죠.<br /><br />
                             저희는 여러분이 썸타임에서 평생 머무르길 바라지 않아요.
                             오히려 여기서 좋은 사람을 만나 <strong>빨리 앱을 지우고 떠나시는 게</strong> 저희의 목표랍니다.<br /><br />
                             "왜 대화가 안 이어질까?", "왜 매칭이 안 될까?"<br />
@@ -60,12 +61,10 @@ export default async function ResultPage({ params }: PageProps) {
                     >
                         진짜 인연 만나러 가기
                         <span className="block text-xs font-normal opacity-90 mt-1">
-                            (한밭대/충남대/대전대 학생만 가능해요)
                         </span>
                     </a>
 
                     <div className="text-xs text-gray-400">
-                        * 테스트 결과는 매칭 시 대화 소재로 활용될 수 있어요.
                     </div>
                 </div>
 
