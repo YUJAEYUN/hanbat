@@ -27,12 +27,6 @@ export default function RootLayout({
   return (
     <html lang="ko">
       <body className={inter.className}>
-        <Script
-          src="https://t1.kakaocdn.net/kakao_js_sdk/2.7.0/kakao.min.js"
-          integrity="sha384-l+xbElFSnP5k7wFBOzZeyYl1ASuXh+5lRSbXVqv/76MJGaDNKx6q71kxJdX99X64"
-          crossOrigin="anonymous"
-          strategy="beforeInteractive"
-        />
         <KakaoInit />
         {children}
       </body>
