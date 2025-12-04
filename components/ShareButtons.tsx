@@ -26,6 +26,8 @@ export default function ShareButtons() {
                     title: '한밭대생 연애 유형 테스트',
                     description: '나는 어떤 연애 스타일일까? 100% 리얼 학생 개발팀이 만든 테스트!',
                     imageUrl: `${baseUrl}/og-image.png`,
+                    imageWidth: 1200,
+                    imageHeight: 630,
                     link: {
                         mobileWebUrl: baseUrl,
                         webUrl: baseUrl,
